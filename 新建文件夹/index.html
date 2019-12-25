@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1579927_uy130f6gdm.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1580951_eo5zrzwjzl.css">
+    <style>
+        html,body {
+          height: 100%;
+        }
+        header {
+            position: relative;
+            height: 100%;
+            min-height: 600px;
+            background: black url(https://i.loli.net/2019/12/25/oSmxyjTV6n9JLiY.jpg)
+              center no-repeat;
+            background-size: cover;
+        }
+        header::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(255, 255, 255,0.3);
+        }
+        header .logo {
+            color: rgb(254,209,54);
+            font-size: 32px;
+            float: left;
+            margin-top: 10px;
+        }
+        header .nav {
+            float: right;
+        }
+        header .nav > li {
+            float: left;
+            margin: 10px;
+        }
+        header .nav a {
+            display: inline-block;
+            padding: 5px;
+            border-radius: 4px;
+            color:#fff;
+            font-size: 16px;
+        }
+        header .nav a:hover {
+            background:rgb(254,209,54);
+        }
+        header .intro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+        header .intro h1 {
+            font-size: 32px;
+        }
+        header .intro h2 {
+            font-size: 46px;
+            margin-top: 20px;
+        }
+        header .intro .button {
+            margin-top: 20px;
+        }
+        section {
+            margin-top:300px;
+            text-align:center;
+        }
+        section > h2 {
+            font-size:40px;
+        }
+        section > p {
+            margin-top: 10px;
+
+        }
+        section .family-intro figure {
+            width: calc(33.33% - 20px);
+            height: 360px;
+            margin: 10px;
+            float: left;
+        }
+        section .family-intro a {
+            display: block;
+            height: 300px;
+        }
+        section .family-intro img {
+            width: 100%;
+            height: 100%;
+        }
+        section .family-intro figcaption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        section .family-intro p {
+            color: #666;
+            margin-top: 10px;
+        }
+      
+        section .family figure {
+            width: calc(33.33% - 20px);
+            height: 360px;
+            margin: 10px;
+            float: left;
+        }
+        section .family a {
+            display: block;
+            height: 300px;
+        }
+        section .family img {
+            width: 100%;
+            height: 100%;
+        }
+        section .family figcaption {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        section .family p {
+            color: #666;
+            margin-top: 10px;
+        }
+        section .timeline > li:nth-child(odd) {
+            margin-top: 240px;
+            position: relative;
+            padding-right: calc(50% - 100px);
+            text-align: right;
+        }
+        section .timeline img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid lightblue;
+        }
+        section .timeline > li:nth-child(odd) img {
+            float: right;
+        }
+        section .timeline > li:nth-child(odd) dl {
+            margin-right: 240px;
+        }
+        
+        section .timeline > li:nth-child(even) {
+            margin-top: 240px;
+            position: relative;
+            padding-left: calc(50% - 100px);
+            text-align: left;
+        }
+        section .timeline > li:nth-child(even) dl {
+            margin-right: 0;
+            margin-left: 240px;
+        }
+        section .timeline > li:nth-child(even) img {
+            float: left;
+        }
+        section .timeline dt {
+            font-size: 32px;
+            font-weight: bold;  
+        }
+        section .timeline dd:nth-of-type(1) {
+            color: #666;
+        }
+        section .timeline > li::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 200px;
+            margin-left: 0px;
+            display: inline-block;
+            width: 8px;
+            height: 136px;
+            background-color: lightblue;
+        }
+        section .timeline .img {
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            padding-top: 50px;
+            border-radius: 50%;
+            border: 6px solid lightblue;
+            font-size: 32px;
+            color: yellow;
+        }
+        section .timeline > li:last-child::before{
+            height:0;
+        }
+        footer {
+            background:black;
+            width:100%;
+            height:100%;
+            text-align: center;
+            margin-top: 300px;
+        }
+        footer h1 {
+            font-size: 32px;
+            color:rgb(254,209,54);
+        }
+        footer h2 {
+            font-size: 46px;
+            margin-top: 20px;
+            color:seagreen;
+        }
+    </style> 
+</head>         
+<body>
+    <header>
+                <div class="navbar layout clearfix">
+                    <a href="#" class="logo">Small world, big me</a>
+                    <ul class="nav">
+                        <li><a href="#">Basic situation</a></li>
+                        <li><a href="#">dynamic</a></li>
+                      <li><a href="#">The timeline</a></li>
+                    </ul>
+                </div>    
+                <div class="intro layout">
+                    <h1>Welcome To My Word!</h1>
+                    <h2>Meet the better me</h2>
+                    <a href="#" class="button">TELL ME MORE</a>    
+                </div>
+    </header>
+    <main class="layout">
+            <section>
+                <h2>Basic situation</h2>
+                <p>Something about me.</p>
+                <div class="family-intro clearfix">
+                    <figure>
+                        <figcaption>High school</figcaption>
+                        <p>I studied in anqing huide middle school and spent three years there.
+                           I am very happy to make friends with my classmates in class 7. 
+                           Thank you for coming with me.</p>
+                        <a href=""><img src="http://www.hdgjzx.cn/wap/adverpic/01.jpg" alt=""></a>
+                    </figure>
+                    <figure>
+                        <figcaption>The university of</figcaption>
+                        <p>I spent my college life in wanjiang college of anhui normal university.
+                           our years of youth without regret, dream of the journey.
+                           Here I study actively, optimistic and brave.</p>
+                        <a href=""><img src="http://www.100zhaosheng.com/file/upload/201708/22/11100034188.jpg" alt=""></a>
+                    </figure>
+                    <figure>
+                        <figcaption>Step into society</figcaption>
+                        <p>After graduation, I came to work in hefei.
+                           Great lakes city, innovation highland.
+                           I hope tomorrow will be better and better.
+                           Let's hope for a better tomorrow.
+                        </p>
+                        <a href=""><img src="https://pic2.zhimg.com/v2-f06c521d1dd909f3944fe3228de93690_1200x500.jpg" alt=""></a>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <h2>Dynamic</h2>
+                <p>Share some of my updates.</p>
+                <div class="family">
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/2Z7p5TuCvlKU9mI.jpg" alt=""></a>
+                            <figcaption>Military training</figcaption>
+                            <p>First military training in college</p>
+                    </figure>              
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/jGO3DtmydwX1U6a.jpg" alt=""></a>
+                            <figcaption>The sports meet</figcaption>
+                            <p>Witness our friendship</p>
+                    </figure>
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/2TQYJVrLs4obFSj.jpg" alt=""></a>
+                            <figcaption>The winning</figcaption>
+                            <p>Witness our strength</p>
+                    </figure>
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/KaBNhlAjZfEgW8b.jpg" alt=""></a>
+                            <figcaption>graduation</figcaption>
+                            <p>Time is not old, we do not come loose</p>
+                    </figure>
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/BGfRQlaZCnuUhb2.jpg" alt=""></a>
+                            <figcaption>The ancient city </figcaption>
+                            <p>In one thousand, the ancient city of</p>
+                    </figure>
+                    <figure>
+                            <a href=""><img src="https://i.loli.net/2019/12/25/RH9LO2hBJvenZT5.jpg" alt=""></a>
+                            <figcaption>hangzhou</figcaption>
+                            <p>The most beautiful west lake</p>
+                    </figure>
+            </div>
+        </section>
+        <section>
+            <h2>ABOUT</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <ul class="timeline clearfix">
+                        <li>
+                            <img src="https://i.loli.net/2019/12/25/rNvPhjo7tFAiadu.jpg" alt="">
+                            <dl>
+                                <dt>May 31, 2015</dt>
+                                <dd>Last high school photo</dd>
+                                <dd>Goodbye teacher, goodbye classmates, goodbye huide, goodbye my three years.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="https://i.loli.net/2019/12/25/3ls2HcQNTvwMKFk.jpg" alt="">
+                            <dl>
+                                <dt>September 2, 2015</dt>
+                                <dd>First high school reunion</dd>
+                                <dd>Why did more people get together later.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="https://i.loli.net/2019/12/25/rc9hewkyOno71uT.jpg" alt="">
+                            <dl>
+                                <dt>April 20, 2017</dt>
+                                <dd>campus</dd>
+                                <dd>An ordinary day in college.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <img src="https://i.loli.net/2019/12/25/I6OhuwVMEBcrQoT.jpg" alt="">
+                            <dl>
+                                <dt>May 15, 2019</dt>
+                                <dd>Rent a house</dd>
+                                <dd>Some of the problems of living independently.</dd>
+                            </dl>
+                        </li>
+                        <li>            
+                            <span class="img">To be continued!</span>
+                        </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+            <h1> merry Christmas</h1>
+            <h2>I'm sorry, I have no time, no money, only time to give you a blessing.
+
+                    I spent two days staying up late to make this static page. At first, I thought it was simple, but I spent a lot of time on the idea. I didn't know what to write.
+                    
+                    Today is 25th, I thought I would prepare it for you today. Later, I remembered that there was a Christmas Eve before Christmas when I saw the circle of friends. It's a little late, and the page is pretty rough.
+                    
+                    Still, merry Christmas.
+            </h2>
+    </footer>
+</body>
+</html>
